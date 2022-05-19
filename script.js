@@ -1,5 +1,4 @@
 const staysEl = document.querySelector(".stays");
-const headerEl = document.querySelector(".search-interface");
 const searchIconEl = document.querySelector(".s-icon");
 const navbarEl = document.querySelector(".navbar");
 const closeBtn = document.querySelector(".close");
@@ -17,6 +16,7 @@ const defaultLoc = document.querySelector(".location-default");
 const navLocation = document.querySelector(".location");
 const searchEl = document.querySelector(".customize-search");
 const totalStays = document.querySelector(".total-num");
+const popupEl = document.querySelector(".popup");
 
 let reArray = [];
 let count1 = 0;
@@ -78,23 +78,27 @@ function superHost(Elarray, array) {
 getData();
 
 searchIconEl.addEventListener("click", function () {
-  headerEl.classList.add("active");
+  popupEl.classList.add("active");
 });
 
 console.log(closeBtn);
 
 closeBtn.addEventListener("click", function () {
-  headerEl.classList.remove("active");
+  popupEl.classList.remove("active");
 });
 
 customizelocationsEl.addEventListener("click", function () {
   agesEl.classList.remove("active");
   locationsEl.classList.add("active");
+  customizelocationsEl.classList.add("active");
+  guestsEl.classList.remove("active");
 });
 
 guestsEl.addEventListener("click", function () {
   agesEl.classList.add("active");
   locationsEl.classList.remove("active");
+  customizelocationsEl.classList.remove("active");
+  guestsEl.classList.add("active");
 });
 
 childrenMinusBtn.addEventListener("click", function () {
@@ -140,10 +144,14 @@ locationsEl.addEventListener("click", (e) => {
 searchEl.addEventListener("click", function () {
   reArray = data.filter((item) => {
     const arr = defaultLoc.textContent.split(",");
+    if (arr[0] === "Whole") {
+      return item.maxGuests >= maxGuest;
+    }
     if (item.city === arr[0] && item.maxGuests >= maxGuest) return item;
   });
-  console.log(reArray);
   staysEl.innerHTML = "";
   addToDOM(reArray);
+  const stayEl = document.querySelectorAll(".stay-features");
+  superHost([...stayEl], reArray);
   totalStays.textContent = `${reArray.length}`;
 });
