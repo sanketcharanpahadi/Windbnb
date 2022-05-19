@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-light-orange: #eb5757;
+  --color-black: #333;
+  --color-gray: #bdbdbd;
+  --color-gray-3: #828282;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* navbar */
+.navbar {
+  padding: 3rem 1rem;
+  gap: 3rem;
+  /* display: none; */
+}
+
+.search {
+  border-radius: 1.6rem;
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  align-self: center;
+}
+
+.search span {
+  padding: 1.3rem;
+}
+
+.location {
+  color: var(--color-black);
+}
+
+.add {
+  color: var(--color-gray);
+}
+
+.s-icon {
+  color: var(--color-light-orange);
+}
+
+/* header popup */
+
+.search-interface {
+  background-color: #fff;
+  padding: 2rem 1rem;
+  position: relative;
+  height: 80vh;
+  display: none;
+}
+
+.search-interface.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.headline {
+  margin-bottom: 2.5rem;
+}
+
+.edit {
+  color: var(--color-black);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.close {
+  color: #333;
+  font-size: 2rem;
+}
+
+.customize {
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 1.6rem;
+}
+
+.customize-location {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+h5 {
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.add-guest {
+  color: var(--color-gray);
+}
+
+.customize-guests {
+  padding: 1rem 2rem;
+}
+
+.customize-search {
+  background-color: #eb5757;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  width: 12.3rem;
+  height: 4.8rem;
+  border-radius: 1.6rem;
+}
+
+.search-img {
+  margin-right: 1rem;
+}
+
+.locations {
+  position: absolute;
+  bottom: -25rem;
+  font-size: 1.4rem;
+  gap: 2.9rem;
+  left: 2rem;
+  display: none;
+}
+
+.locations.active {
+  display: flex;
+}
+
+.loc-icon {
+  font-size: 1.6rem;
+  margin-right: 1rem;
+}
+
+.ages {
+  position: absolute;
+  margin-top: 5rem;
+  gap: 6rem;
+  display: none;
+}
+
+.ages.active {
+  display: flex;
+}
+
+.inc-dec {
+  gap: 1rem;
+}
+
+.inc-dec button {
+  border: none;
+  background-color: #fff;
+  flex-basis: 2rem;
+  border: 1px solid black;
+  border-radius: 0.3rem;
+}
+
+.adults h3 {
+  font-size: 1.2rem;
+}
+
+.age-info {
+  margin-bottom: 1.5rem;
+  color: var(--color-gray);
+}
+
+/* end of the header section */
+
+/* main section */
+.main {
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.stay-features {
+  margin-bottom: 1.2rem;
+}
+
+.number-stay {
+  margin-bottom: 2.5rem;
+}
+
+.stay-img {
+  margin-bottom: 1.5rem;
+}
+
+.stay-image {
+  border-radius: 1.6rem;
+}
+
+.host {
+  font-size: 1rem;
+  border: 1px solid var(--color-gray-3);
+  padding: 0.5rem 1rem;
+  border-radius: 1.6rem;
+  font-weight: 700;
+}
+
+.feature-apt {
+  font-size: 1.2rem;
+  color: var(--color-gray-3);
+}
+
+.rating {
+  font-size: 1.2rem;
+}
+
+.rate-num {
+  color: #4f4f4f;
+}
+
+.stays {
+  gap: 4rem;
+}
+
+.star {
+  color: var(--color-light-orange);
+}
+
+.style {
+  color: var(--color-black);
+}
+
+.stay-image {
+  width: 395px;
+  height: 269px;
+}
+
+/* end of main section */
+
+@media (min-width: 800px) {
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.5rem 8rem;
+  }
+
+  .search-interface {
+    height: 65%;
+    min-height: fit-content;
+  }
+
+  .headline {
+    margin-bottom: 6rem;
+  }
+
+  .customize {
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .customize-location,
+  .customize-guests {
+    border-right: 1px solid #f2f2f2;
+    flex-basis: 33.33333%;
+    border-bottom: 0;
+  }
+
+  .customize-search {
+    position: static;
+    transform: unset;
+    margin: 0 auto;
+  }
+
+  .main {
+    padding: 0 10rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .stays {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .stay {
+    flex-basis: 30%;
+  }
+}
