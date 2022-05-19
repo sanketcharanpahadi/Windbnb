@@ -31,7 +31,6 @@ body {
 .navbar {
   padding: 3rem 1rem;
   gap: 3rem;
-  /* display: none; */
 }
 
 .search {
@@ -68,10 +67,6 @@ body {
 
 .search-interface {
   display: block;
-  /* position: fixed;
-  top: 0;
-  right: 0;
-  left: 0; */
 }
 
 .popup {
