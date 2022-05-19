@@ -1,0 +1,42 @@
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.border-1 {
+  border-right: 1px solid #f2f2f2;
+}
+
+.font-small {
+  font-size: 1.4rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+.relative {
+  position: relative;
+}
