@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="utills.css" />
     <link rel="stylesheet" href="style.css" />
 
-    <title>Devchallenges</title>
+    <title>Windbnb</title>
   </head>
   <body>
     <nav class="navbar flex flex-col">
@@ -44,81 +44,83 @@
       </div>
     </nav>
 
-    <header class="search-interface">
-      <div class="headline flex justify-between items-center">
-        <p class="edit">Edit your search</p>
-        <span class="close pointer"><i class="fa-solid fa-xmark"></i></span>
-      </div>
+    <div class="popup">
+      <header class="search-interface">
+        <div class="headline flex justify-between items-center">
+          <p class="edit">Edit your search</p>
+          <span class="close pointer"><i class="fa-solid fa-xmark"></i></span>
+        </div>
 
-      <div class="customize pointer">
-        <div class="customize-location relative">
-          <h5>location</h5>
-          <span class="location-name location-default font-small"
-            >Whole, Finland</span
+        <div class="customize pointer">
+          <div class="customize-location relative active">
+            <h5>location</h5>
+            <span class="location-name location-default font-small"
+              >Whole, Finland</span
+            >
+            <div class="locations flex flex-col active">
+              <div class="loaction-1 flex items-center pointer">
+                <span class="loc-icon pointer"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></span>
+                <span class="location-name">Helsinki, Finland</span>
+              </div>
+              <div class="loaction-2 flex items-center pointer">
+                <span class="loc-icon pointer"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></span>
+                <span class="location-name">Turku, Finland</span>
+              </div>
+              <div class="loaction-3 flex items-center pointer">
+                <span class="loc-icon pointer"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></span>
+                <span class="location-name">Oulu, Finland</span>
+              </div>
+              <div class="loaction-4 flex items-center pointer">
+                <span class="loc-icon pointer"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></span>
+                <span class="location-name">Vaasa, Finland</span>
+              </div>
+            </div>
+          </div>
+          <div class="customize-guests relative">
+            <h5>Guests</h5>
+            <span class="add-guest font-small">Add guests</span>
+
+            <div class="ages flex flex-col">
+              <div class="adults">
+                <h3>Adults</h3>
+                <div class="age-info font-small">Ages 13 or above</div>
+                <div class="inc-dec-adults flex items-center inc-dec">
+                  <button class="adult-plus pointer">+</button>
+                  <div class="age-total-adults font-small">0</div>
+                  <button class="adult-minus font-small pointer">-</button>
+                </div>
+              </div>
+
+              <div class="children">
+                <h3>Children</h3>
+                <div class="age-info font-small">Ages 2-12</div>
+                <div class="inc-dec-children flex items-center inc-dec">
+                  <button class="children-plus pointer">+</button>
+                  <div class="age-total-children font-small">0</div>
+                  <button class="children-minus pointer">-</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="customize-search flex justify-center items-center font-small pointer"
           >
-          <div class="locations flex flex-col active">
-            <div class="loaction-1 flex items-center pointer">
-              <span class="loc-icon pointer"
-                ><i class="fa-solid fa-location-dot"></i
-              ></span>
-              <span class="location-name">Helsinki, Finland</span>
-            </div>
-            <div class="loaction-2 flex items-center pointer">
-              <span class="loc-icon pointer"
-                ><i class="fa-solid fa-location-dot"></i
-              ></span>
-              <span class="location-name">Turku, Finland</span>
-            </div>
-            <div class="loaction-3 flex items-center pointer">
-              <span class="loc-icon pointer"
-                ><i class="fa-solid fa-location-dot"></i
-              ></span>
-              <span class="location-name">Oulu, Finland</span>
-            </div>
-            <div class="loaction-4 flex items-center pointer">
-              <span class="loc-icon pointer"
-                ><i class="fa-solid fa-location-dot"></i
-              ></span>
-              <span class="location-name">Vaasa, Finland</span>
-            </div>
+            <span class="search-img"
+              ><i class="fa-solid fa-magnifying-glass"></i
+            ></span>
+            <span>Search</span>
           </div>
         </div>
-        <div class="customize-guests relative">
-          <h5>Guests</h5>
-          <span class="add-guest font-small">Add guests</span>
-
-          <div class="ages flex flex-col">
-            <div class="adults">
-              <h3>Adults</h3>
-              <div class="age-info font-small">Ages 13 or above</div>
-              <div class="inc-dec-adults flex items-center inc-dec">
-                <button class="adult-plus pointer">+</button>
-                <div class="age-total-adults font-small">0</div>
-                <button class="adult-minus font-small pointer">-</button>
-              </div>
-            </div>
-
-            <div class="children">
-              <h3>Children</h3>
-              <div class="age-info font-small">Ages 2-12</div>
-              <div class="inc-dec-children flex items-center inc-dec">
-                <button class="children-plus pointer">+</button>
-                <div class="age-total-children font-small">0</div>
-                <button class="children-minus pointer">-</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="customize-search flex justify-center items-center font-small pointer"
-        >
-          <span class="search-img"
-            ><i class="fa-solid fa-magnifying-glass"></i
-          ></span>
-          <span>Search</span>
-        </div>
-      </div>
-    </header>
+      </header>
+    </div>
 
     <main>
       <section class="main">
@@ -130,49 +132,7 @@
           </p>
         </div>
 
-        <div class="stays flex flex-col">
-          <!-- <div class="stay">
-            <div class="stay-img">
-              <img
-                src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
-                alt=""
-                class="stay-image"
-              />
-            </div>
-            <div class="stay-features flex justify-between items-center">
-              <div class="host">SUPER HOST</div>
-              <div class="feature-apt">Entire apartment .2beds</div>
-              <div class="rating">
-                <span class="star"><i class="fa-solid fa-star"></i></span>
-                <span class="rate-num">4.40</span>
-              </div>
-            </div>
-            <h2 class="style font-small">
-              Stylist apartment in center of the city
-            </h2>
-          </div> -->
-
-          <!-- <div class="stay">
-            <div class="stay-img">
-              <img
-                src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
-                alt=""
-                class="stay-image"
-              />
-            </div>
-            <div class="stay-features flex justify-between items-center">
-              <div class="host">SUPER HOST</div>
-              <div class="feature-apt">Entire apartment .2beds</div>
-              <div class="rating">
-                <span class="star"><i class="fa-solid fa-star"></i></span>
-                <span class="rate-num">4.40</span>
-              </div>
-            </div>
-            <h2 class="style font-small">
-              Stylist apartment in center of the city
-            </h2>
-          </div> -->
-        </div>
+        <div class="stays flex flex-col"></div>
       </section>
     </main>
 
