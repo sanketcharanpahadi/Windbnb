@@ -17,79 +17,165 @@
     />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
+    <link rel="stylesheet" href="utills.css" />
+    <link rel="stylesheet" href="style.css" />
+
     <title>Devchallenges</title>
-
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
-
-      ul {
-        padding-left: 24px;
-      }
-
-      li {
-        margin-bottom: 8px;
-      }
-
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
-        font-size: 1rem;
-        font-weight: 400;
-      }
-
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
-    </style>
   </head>
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
+    <nav class="navbar flex flex-col">
+      <div class="logo">
+        <img src="logo.svg" alt="" />
       </div>
 
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
-    </div>
+      <div class="search flex items-center">
+        <span class="location border-1 font-small">Whole, Finand</span>
+        <span class="add border-1 font-small">Add guests</span>
+        <span class="s-icon font-small pointer"
+          ><i class="fa-solid fa-magnifying-glass"></i
+        ></span>
+      </div>
+    </nav>
+
+    <header class="search-interface">
+      <div class="headline flex justify-between items-center">
+        <p class="edit">Edit your search</p>
+        <span class="close pointer"><i class="fa-solid fa-xmark"></i></span>
+      </div>
+
+      <div class="customize pointer">
+        <div class="customize-location relative">
+          <h5>location</h5>
+          <span class="location-name location-default font-small"
+            >Whole, Finland</span
+          >
+          <div class="locations flex flex-col active">
+            <div class="loaction-1 flex items-center pointer">
+              <span class="loc-icon pointer"
+                ><i class="fa-solid fa-location-dot"></i
+              ></span>
+              <span class="location-name">Helsinki, Finland</span>
+            </div>
+            <div class="loaction-2 flex items-center pointer">
+              <span class="loc-icon pointer"
+                ><i class="fa-solid fa-location-dot"></i
+              ></span>
+              <span class="location-name">Turku, Finland</span>
+            </div>
+            <div class="loaction-3 flex items-center pointer">
+              <span class="loc-icon pointer"
+                ><i class="fa-solid fa-location-dot"></i
+              ></span>
+              <span class="location-name">Oulu, Finland</span>
+            </div>
+            <div class="loaction-4 flex items-center pointer">
+              <span class="loc-icon pointer"
+                ><i class="fa-solid fa-location-dot"></i
+              ></span>
+              <span class="location-name">Vaasa, Finland</span>
+            </div>
+          </div>
+        </div>
+        <div class="customize-guests relative">
+          <h5>Guests</h5>
+          <span class="add-guest font-small">Add guests</span>
+
+          <div class="ages flex flex-col">
+            <div class="adults">
+              <h3>Adults</h3>
+              <div class="age-info font-small">Ages 13 or above</div>
+              <div class="inc-dec-adults flex items-center inc-dec">
+                <button class="adult-plus pointer">+</button>
+                <div class="age-total-adults font-small">0</div>
+                <button class="adult-minus font-small pointer">-</button>
+              </div>
+            </div>
+
+            <div class="children">
+              <h3>Children</h3>
+              <div class="age-info font-small">Ages 2-12</div>
+              <div class="inc-dec-children flex items-center inc-dec">
+                <button class="children-plus pointer">+</button>
+                <div class="age-total-children font-small">0</div>
+                <button class="children-minus pointer">-</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="customize-search flex justify-center items-center font-small pointer"
+        >
+          <span class="search-img"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
+          <span>Search</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="main">
+        <div class="number-stay flex justify-between items-center">
+          <h1>Stays in Finland</h1>
+          <p class="total-stay font-small">
+            <span class="total-num">12+</span>
+            <span>stays</span>
+          </p>
+        </div>
+
+        <div class="stays flex flex-col">
+          <!-- <div class="stay">
+            <div class="stay-img">
+              <img
+                src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
+                alt=""
+                class="stay-image"
+              />
+            </div>
+            <div class="stay-features flex justify-between items-center">
+              <div class="host">SUPER HOST</div>
+              <div class="feature-apt">Entire apartment .2beds</div>
+              <div class="rating">
+                <span class="star"><i class="fa-solid fa-star"></i></span>
+                <span class="rate-num">4.40</span>
+              </div>
+            </div>
+            <h2 class="style font-small">
+              Stylist apartment in center of the city
+            </h2>
+          </div> -->
+
+          <!-- <div class="stay">
+            <div class="stay-img">
+              <img
+                src="https://images.unsplash.com/photo-1505873242700-f289a29e1e0f?ixlib=rb-1.2.1&auto=format&fit=crop&w=2255&q=80"
+                alt=""
+                class="stay-image"
+              />
+            </div>
+            <div class="stay-features flex justify-between items-center">
+              <div class="host">SUPER HOST</div>
+              <div class="feature-apt">Entire apartment .2beds</div>
+              <div class="rating">
+                <span class="star"><i class="fa-solid fa-star"></i></span>
+                <span class="rate-num">4.40</span>
+              </div>
+            </div>
+            <h2 class="style font-small">
+              Stylist apartment in center of the city
+            </h2>
+          </div> -->
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
